@@ -203,6 +203,15 @@ nav a[aria-current="page"] button {
     margin: 0;
 }
 
+.gallery-caption {
+    padding-top: 10px;
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--text-muted);
+}
+
 .gallery-placeholder {
     display: none;
     height: 260px;
