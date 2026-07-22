@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Team Coffee</title>
+        <meta name="description" content="Team Coffee -- a running joke turned running crew turned apparel line. Hoodies, hats, and tees for people who take their coffee, and their miles, seriously.">
+        <link rel="icon" type="image/png" href="favicon-32.png">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="team-coffee.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <meta property="og:title" content="Team Coffee">
+        <meta property="og:description" content="Are you on the team? Shop Team Coffee apparel.">
+        <meta property="og:image" content="https://teamcoffee.net/coffee-beans-transparent.png">
+        <meta property="og:url" content="https://teamcoffee.net/">
+        <meta property="og:type" content="website">
+        <link rel="canonical" href="https://teamcoffee.net/">
+    </head>
+    <body class="bangers-regular">
+        <div class="page">
+            <header>
+                <a class="logo-link" href="https://team-coffee.printify.me/">
+                    <img src="./logo-white-no-bg.png" alt="Team Coffee">
+                </a>
+                <nav>
+                    <a href="index.html" aria-current="page"><button class="bangers-regular">Home</button></a>
+                    <a href="about.html"><button class="bangers-regular">About</button></a>
+                    <a href="wisdom.html"><button class="bangers-regular">Wisdom</button></a>
+                    <a href="https://team-coffee.printify.me/" target="_top"><button class="bangers-regular">Store</button></a>
+                </nav>
+            </header>
+
+            <main>
+                <section class="hero">
+                    <h2>Are you on the team?</h2>
+                    <p>Team Coffee started as a joke among a group of long-distance runners. It's now a real apparel line -- hoodies, hats, and tees for anyone who agrees that hills are breakfast and coffee is non-negotiable.</p>
+                    <a href="https://team-coffee.printify.me/" target="_top"><button class="bangers-regular btn btn-teal">Shop the Store</button></a>
+                </section>
+
+                <section class="gallery" aria-label="Team Coffee in the wild">
+                    <figure>
+                        <img src="gallery/costa-hoodie.jpg" alt="Team Coffee member wearing a maroon Team Coffee hoodie outside a coffee shop" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <figcaption class="gallery-placeholder">gallery/costa-hoodie.jpg<span>Hoodie outside the coffee shop</span></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="gallery/teamcoffee-hat.jpg" alt="Team Coffee baseball cap" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <figcaption class="gallery-placeholder">gallery/teamcoffee-hat.jpg<span>Hat selfie</span></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="gallery/family-boat.jpg" alt="Team Coffee family wearing Team Coffee hoodies on a boat" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <figcaption class="gallery-placeholder">gallery/family-boat.jpg<span>Family on the boat</span></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="gallery/group-denali.jpg" alt="Team Coffee crew wearing Team Coffee gear on a trip" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <figcaption class="gallery-placeholder">gallery/group-denali.jpg<span>Group in Denali</span></figcaption>
+                    </figure>
+                </section>
+
+                <section class="hero hero-secondary">
+                    <h2>The Coffee That Fuels Us</h2>
+                    <p>No miles without it. Some of the stops along the way.</p>
+                </section>
+
+                <section class="gallery" aria-label="The coffee that fuels the team">
+                    <figure>
+                        <img src="gallery/third-coffee.jpg" alt="A coffee cup labeled 'Third coffee!!'">
+                    </figure>
+                    <figure>
+                        <img src="gallery/brothers-coffee.jpg" alt="Team Coffee member getting coffee from the Brothers Coffee truck">
+                    </figure>
+                    <figure>
+                        <img src="gallery/runners-high-coffee.jpg" alt="A bag of Runner's High Coffee Co. beans">
+                    </figure>
+                    <figure>
+                        <img src="gallery/third-latte.jpg" alt="A latte at a sidewalk cafe">
+                    </figure>
+                    <figure>
+                        <img src="gallery/the-place.jpg" alt="A sidewalk sign reading 'This is the coffee place I was telling you about'">
+                    </figure>
+                </section>
+            </main>
+
+            <footer>
+                <p style="margin:0 0 6px;">Team Coffee &mdash; shirts, hats, and questionable life choices.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61575765361530" target="_blank" rel="noopener">Facebook</a>
+                </div>
+                <p style="margin:0; font-size:0.85rem;">&copy; <span id="year"></span> Team Coffee. <a href="https://team-coffee.printify.me/" target="_top">Visit the store</a>.</p>
+            </footer>
+        </div>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </body>
+</html>

@@ -1,0 +1,321 @@
+/* ===== Design tokens ===== */
+:root {
+    --bg: #1a1a1a;
+    --bg-alt: #242118;
+    --text: #f0f0f0;
+    --text-muted: #c9c9c9;
+    --brown: #6f2c04;
+    --brown-dark: #4f2c04;
+    --teal: #00c2c2;
+    --teal-dark: #009999;
+    --font-display: "Bangers", system-ui;
+    --font-body: "Segoe UI", Roboto, Arial, sans-serif;
+    --max-width: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ===== Base ===== */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.bangers-regular,
+h1, h2, h3,
+nav button,
+.btn {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5px;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    margin: 0 0 0.5em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+a {
+    color: var(--teal);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+p {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    margin: 0 0 20px;
+}
+
+ul {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+}
+
+/* ===== Layout shell ===== */
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px 24px;
+}
+
+/* ===== Header / nav ===== */
+header {
+    padding: 32px 24px 0;
+    text-align: center;
+}
+
+.logo-link {
+    display: inline-block;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px auto 0;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav button,
+.btn {
+    background-color: var(--brown);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 4px;
+    min-width: 120px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.5em;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+nav button:hover,
+.btn:hover {
+    background-color: var(--brown-dark);
+}
+
+nav button:active,
+.btn:active {
+    transform: scale(0.97);
+}
+
+nav a[aria-current="page"] button {
+    outline: 2px solid var(--teal);
+    outline-offset: 2px;
+}
+
+.btn-teal {
+    background-color: var(--teal-dark);
+}
+
+.btn-teal:hover {
+    background-color: var(--teal);
+}
+
+/* ===== Hero ===== */
+.hero {
+    text-align: center;
+    padding: 40px 24px 10px;
+}
+
+.hero p {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.3rem;
+}
+
+.hero-secondary {
+    padding-top: 50px;
+}
+
+.hero-secondary h2 {
+    font-size: 1.7em;
+}
+
+.hero-secondary p {
+    font-size: 1.1rem;
+}
+
+/* ===== Photo gallery ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 20px 24px 40px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: var(--bg-alt);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+.gallery figure {
+    margin: 0;
+}
+
+.gallery-placeholder {
+    display: none;
+    height: 260px;
+    background-color: var(--bg-alt);
+    border: 2px dashed #555;
+    border-radius: 10px;
+    color: #999;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+    padding: 12px;
+}
+
+.gallery-placeholder span {
+    color: #777;
+    font-size: 0.8rem;
+}
+
+/* ===== Content sections (about, wisdom) ===== */
+.content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 10px 24px 40px;
+}
+
+.content ul {
+    padding-left: 1.2em;
+}
+
+.content li {
+    margin-bottom: 8px;
+}
+
+/* ===== Responsive video embed ===== */
+.video-frame {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 9 / 16;
+    margin: 0 auto;
+}
+
+.video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--bg-alt);
+    color: var(--text-muted);
+    padding: 24px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: var(--teal);
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 10px;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+}
+
+/* ===== Mobile ===== */
+@media screen and (max-width: 700px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery img,
+    .gallery-placeholder {
+        height: 180px;
+    }
+
+    p, .content li {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    nav button,
+    .btn {
+        font-size: 1.3em;
+        padding: 14px 18px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .gallery img,
+    .gallery-placeholder {
+        height: 150px;
+    }
+}
